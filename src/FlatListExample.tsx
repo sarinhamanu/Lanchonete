@@ -24,8 +24,7 @@ const dados: MeuItem[]= [
    {id: "12", nome:"𝕊𝕒𝕝𝕘𝕒𝕕𝕠𝕤 ", descricao: "Tomate,hambuguer , tomate e molho", preco:"9",  image:require('./assets/images/salgados.png')},
    {id: "13", nome:"𝔹𝕒𝕥𝕒𝕥𝕒̃𝕠 ", descricao: "nutella, mel e creme ninho", preco:"20" , image:require('./assets/images/creep.png')},
    {id: "14", nome:"ℙ𝕚𝕫𝕫𝕒𝕤 ", descricao: "Frango, quatro queijo, strogonoff de carne,strogonoff de frango e civeta", preco:"45", image:require('./assets/images/pizza.png')},
-   {id: "15", nome:"ℝ𝕖𝕗𝕣𝕚𝕘𝕖𝕣𝕒𝕟𝕥𝕖  ", descricao: "Coca-Cola, Tubaina e fanta, ", preco:"12", image:require('./assets/images/Refrigerantes.png')},
-   {id: "16", nome:" 𝕊𝕦𝕔𝕠𝕤 ", descricao: " suco de limão, suco de laranja, suco de hortelã e suco de abacaxi", preco:"17", image:require('./assets/images/sucos naturais.png')},
+
 ];
 
 const renderItem = ({item}: {item:MeuItem})=>(
