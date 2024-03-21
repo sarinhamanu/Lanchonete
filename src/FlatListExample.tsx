@@ -5,65 +5,75 @@ interface MeuItem {
     id: string;
     nome: string;
     descricao: string;
-    preco:number;
+    preco:string;
     image:any;
     
 }
 const dados: MeuItem[]= [
-   {id: "1", nome:"Hambuguer ", descricao: "Pão, Molho especial,carne, queijo,presunto, alface ,tomate, bacon", preco: 15.00, image:require('../assets/imagens/Hambuguer.png')},
-   {id: "2", nome:"Batata recheada ", descricao: "Calabresa, queijo, bacon , molho especial", preco: 25.00,  image:require('../assets/imagens/batata frita.png')},
-   {id: "3", nome:"x-buguer", descricao: "molho especial,dois hambuguer artesanal, cebola , queijo e Presunto", preco:15.00,  image:require('../assets/imagens/Hambuguer.png')},
-   {id: "4", nome:"Hot dog ", descricao: "salsicha, milho, batata palha, mostarda,molho verde, salada e frango", preco:10.00, image:require('../assets/imagens/hot dog.png')},
-   {id: "5", nome:"Burritos ", descricao: "carne moída, pimenta,creme azedo,molho típico mexicano com iogurte e cream cheese e limão.", preco:35.00, image:require('../assets/imagens/burrito.png')},
-   {id: "6", nome:"Pastel ", descricao: "carne, frango, calabresa, pizza,queijo e doce", preco:14.99,  image:require('../assets/imagens/Hambuguer.png')},
-   {id: "7", nome:"x-calabresa ", descricao: "Pão,calabresa, alface,cebola, creme especial e queijo na brasa", preco:15.89,  image:require('../assets/imagens/Hambuguer.png')},
-   {id: "8", nome:"Balde de frango ", descricao: "frango ao molho, frango crocante, frango com molho especial", preco:40.00, image:require('../assets/imagens/Hambuguer.png')},
-   {id: "9", nome:"Sushi ", descricao: "hot holl, salmão,Temaki frito, Temaki cru, Guiosa e sunomoro", preco:69.00, image:require('../assets/imagens/Hambuguer.png')},
-   {id: "10", nome:"Açai ", descricao: "Amendoim, nutella, chocoboll,creme ninho, morango, banana, kiwi e ovomaltine", preco:15.00,  image:require('../assets/imagens/Hambuguer.png')},
-   {id: "11", nome:"chippa  ", descricao: "chippa salgada, chippa com frango, chippa de nutella,chippa de carne, chipa de goiaba e creme ninho", preco: 5.00 ,  image:require('../assets/imagens/Hambuguer.png')},
-   {id: "12", nome:"Salgados ", descricao: "Tomate,hambuguer , tomate e molho", preco:9.00,  image:require('../assets/imagens/Hambuguer.png')},
-   {id: "13", nome:"Batatão ", descricao: "bata palha, calabresa, bacon, frango ,tomate, milho verde", preco:20.00 , image:require('../assets/imagens/Hambuguer.png')},
-   {id: "14", nome:"Pizzas ", descricao: "Frango, quatro queijo, strogonoff de carne,strogonoff de frango e civeta", preco:45.00, image:require('../assets/imagens/Hambuguer.png')},
-   {id: "15", nome:"Refrigerante  ", descricao: "Coca-Cola, Tubaina e fanta, ", preco:12.00, image:require('../assets/imagens/Hambuguer.png')},
-   {id: "16", nome:" Sucos ", descricao: " suco de limão, suco de laranja, suco de hortelã e suco de abacaxi", preco:17.00, image:require('../assets/imagens/Hambuguer.png')},
-   
+   {id: "1", nome:"ℍ𝕒𝕞𝕓𝕦𝕘𝕦𝕖𝕣 ", descricao: "Pão, Molho especial,carne, queijo,presunto, alface ,tomate, bacon", preco: "15", image: require('./assets/images/Hamburger.png')},
+   {id: "2", nome:"𝔹𝕒𝕥𝕒𝕥𝕒 𝕣𝕖𝕔𝕙𝕖𝕒𝕕𝕒 ", descricao: "Calabresa, queijo, bacon , molho especial", preco: "25",  image:require('./assets/images/batata.png')},
+   {id: "3", nome:"𝕩-𝕓𝕦𝕘𝕦𝕖𝕣", descricao: "molho especial,dois hambuguer artesanal, cebola , queijo e Presunto", preco:"15",  image:require('./assets/images/Hamburger.png')},
+   {id: "4", nome:"ℍ𝕠𝕥 𝕕𝕠𝕘 ", descricao: "salsicha, milho, batata palha, mostarda,molho verde, salada e frango", preco:"10", image:require('./assets/images/hotdog.png')},
+   {id: "5", nome:"𝔹𝕦𝕣𝕣𝕚𝕥𝕠𝕤 ", descricao: "carne moída, pimenta,creme azedo,molho típico mexicano com iogurte e cream cheese e limão.", preco:"35", image:require('./assets/images/burritos.png')},
+   {id: "6", nome:"ℙ𝕒𝕤𝕥𝕖𝕝 ", descricao: "carne, frango, calabresa, pizza,queijo e doce", preco:"14",  image:require('./assets/images/pastel.png')},
+   {id: "7", nome:"𝕩-𝕔𝕒𝕝𝕒𝕓𝕣𝕖𝕤𝕒", descricao: "Pão,calabresa, alface,cebola, creme especial e queijo na brasa", preco:"15",  image:require('./assets/images/Hamburger.png')},
+   {id: "8", nome:"𝔹𝕒𝕝𝕕𝕖 𝕕𝕖 𝕗𝕣𝕒𝕟𝕘𝕠 ", descricao: "frango ao molho, frango crocante, frango com molho especial", preco:"40", image:require('./assets/images/baldedefrango.png')},
+   {id: "9", nome:"𝕊𝕦𝕤𝕙𝕚 ", descricao: "hot holl, salmão,Temaki frito, Temaki cru, Guiosa e sunomoro", preco:"69", image:require('./assets/images/sushi.png')},
+   {id: "10", nome:"𝕝𝕒𝕤𝕒𝕟𝕙𝕒 ", descricao: "queijo, presunto,molho branco,molho de tomate", preco:"25",  image:require('./assets/images/lasanha.png')},
+   {id: "11", nome:"𝕡𝕒̃𝕠 𝕕𝕖 𝕢𝕦𝕖𝕚𝕛𝕠  ", descricao: "queijo, nutella, creme ninho e frango", preco: "5" ,  image:require('./assets/images/pãodequeijo.png')},
+   {id: "12", nome:"𝕊𝕒𝕝𝕘𝕒𝕕𝕠𝕤 ", descricao: "Tomate,hambuguer , tomate e molho", preco:"9",  image:require('./assets/images/salgados.png')},
+   {id: "13", nome:"𝔹𝕒𝕥𝕒𝕥𝕒̃𝕠 ", descricao: "nutella, mel e creme ninho", preco:"20" , image:require('./assets/images/creep.png')},
+   {id: "14", nome:"ℙ𝕚𝕫𝕫𝕒𝕤 ", descricao: "Frango, quatro queijo, strogonoff de carne,strogonoff de frango e civeta", preco:"45", image:require('./assets/images/pizza.png')},
+   {id: "15", nome:"ℝ𝕖𝕗𝕣𝕚𝕘𝕖𝕣𝕒𝕟𝕥𝕖  ", descricao: "Coca-Cola, Tubaina e fanta, ", preco:"12", image:require('./assets/images/Refrigerantes.png')},
+   {id: "16", nome:" 𝕊𝕦𝕔𝕠𝕤 ", descricao: " suco de limão, suco de laranja, suco de hortelã e suco de abacaxi", preco:"17", image:require('./assets/images/sucos naturais.png')},
 ];
 
 const renderItem = ({item}: {item:MeuItem})=>(
     <TouchableOpacity style={styles.item}>
-        <Text>{item.nome}</Text>
-        <Text>{item.idade}</Text>
-        <Text>{item.email}</Text>
+        <Text style={styles.itemTexto1}>{item.nome}</Text>
+        <Text style={styles.itemTexto} >{item.descricao}</Text>
+        <Text style={styles.itemTexto2}>R${item.preco},00</Text>
+       <Image source={item.image} style={styles.image}/>
     </TouchableOpacity>
 );
 
-function FlatListExample(): React.JSX.Element{
+function LanchoneteExample(): React.JSX.Element{
     return (
         <View style={styles.container}>
-            <StatusBar backgroundColor="green" barStyle='light-content'/>
+            <StatusBar backgroundColor="black" barStyle='light-content'/>
             <View style={styles.header}>
-               <Text style={styles.headerText}>Flat List</Text>
+              
+            <TouchableOpacity>
+                <Image
+                  source={require('./assets/images/casa.png')}
+                  style={styles.footerIcone}/>
+            </TouchableOpacity>
+               <Text style={styles.headerText}>𝖈𝖆𝖋𝖊𝖙𝖊𝖗𝖎𝖆 𝖇𝖊𝖆𝖈𝖍</Text>
+               
             </View>
            <FlatList  
            showsVerticalScrollIndicator={false}
            data={dados}
            renderItem={renderItem}
-           keyExtractor={(item) => item.id}
+           keyExtractor={(MeuItem) => MeuItem.id}
            />
-           <View style={styles.footer}>
+          
+
+
+ <View style={styles.footer}>
             <TouchableOpacity>
                 <Image
-                  source={require('./assets/images/home.png')}
+                  source={require('./assets/images/anotar.png')}
                   style={styles.footerIcon}/>
             </TouchableOpacity>
             
             <TouchableOpacity>
-                <Image source={require('./assets/images/orders.png')}
+                <Image source={require('./assets/images/watts.png')}
                   style={styles.footerIcon}/>
             </TouchableOpacity>
 
             <TouchableOpacity>
-                <Image source={require('./assets/images/profile.png')}
+                <Image source={require('./assets/images/carrinho.png')}
                   style={styles.footerIcon}/>
             </TouchableOpacity>
            </View>
@@ -76,34 +86,71 @@ const styles = StyleSheet.create({
 
    },
    item: {
-     backgroundColor: 'yellow',
+     backgroundColor: 'black',
+     color:'white',
      padding:20,
      marginVertical: 8,
-     marginHorizontal: 16
+     marginHorizontal: 16,
+     borderRadius:30
    },
    header: {
-     backgroundColor: 'green',
+     backgroundColor: 'pink',
      alignItems: 'center',
-     paddingVertical: 10
+     paddingVertical: 20,
+     flexDirection: 'row',
+     
    },
    headerText: {
-  fontSize: 20,
+  fontSize: 50,
   fontWeight: 'bold',
-  color: 'white'
+  color: 'black'
    },
    footer:{
      borderTopWidth: 0.2,
-     backgroundColor: 'white',
+     backgroundColor: 'black',
      flexDirection: 'row',
      justifyContent: 'space-around',
      alignItems: 'center',
      paddingVertical: 10
    },
    footerIcon:{
-    width: 30,
-    height:30
+    width: 50,
+    height:50,
+ borderRadius:30
+   },
+   image:{
+     height:200,
+     width:200,
+     borderRadius:30
+   },
+   itemTexto:{
+    color:'white',
+   
+    fontSize:15,
+    
+
+   },
+   footerIcone:{
+    width: 70,
+    height:70,
+ borderRadius:30,
+
+
+ 
+ 
+   },
+   itemTexto1:{
+    
+      color:'white',
+      alignSelf:'center',
+      fontSize:30,
+   },
+   itemTexto2:{
+    color:'white',
+    alignSelf:'center',
+    fontSize:30,
    }
 
 });
 
-export default FlatListExample;
+export default LanchoneteExample;

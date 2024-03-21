@@ -7,7 +7,7 @@ function App(): React.JSX.Element{
 
 
 return(
- <FlatListExample/>
+ <ScrollViewExample/>
 );
 
 }
