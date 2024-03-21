@@ -39,7 +39,7 @@ function DoceExample(): React.JSX.Element{
               
             <TouchableOpacity>
                 <Image
-                  source={require('./assets/images/bebidas.png')}
+                  source={require('./assets/images/Doce.png')}
                   style={styles.footerIcone}/>
             </TouchableOpacity>
                <Text style={styles.headerText}>𝕾𝖜𝖊𝖊𝖙𝖘 𝖒𝖊𝖓𝖚</Text>
