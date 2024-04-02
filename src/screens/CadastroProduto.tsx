@@ -1,10 +1,10 @@
 import React, { useState }  from "react";
-import { StyleSheet, View } from "react-native";
+import { Image, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 const CadastroProduto: React.FC = () =>{
     const[produtos, setProdutos]= useState<Produto[]>([]);
     const[nome, setNome]= useState<string>('');
-    const[preco,SetPreco]= useState<number>(0);
+    const[preco,SetPreco]= useState<string>('');
     const[ingredientes, setIngredientes]= useState<string>('');
     const[imagem,setImagem]= useState<any>('');
 
@@ -12,7 +12,37 @@ const CadastroProduto: React.FC = () =>{
 
     }
     return(
-        <View>
+        <View style={styles.container}>
+            <StatusBar backgroundColor="red" barStyle="light-content"/>
+            <View style={styles.header}>
+                <Text style={styles.headerText}>Top Food</Text>
+            </View>
+            
+            <View style={styles.form}>
+                <TextInput style={styles.input} placeholder="Nome do Produto"
+                value={nome}
+                onChangeText={setNome}/>
+              
+                <TextInput style={styles.input} placeholder="Preço"
+                value={preco}
+                onChangeText={SetPreco}/>
+              
+                <TextInput style={styles.input} placeholder="Ingredientes"
+                value={ingredientes}
+                onChangeText={setIngredientes} multiline/>
+             <View style={styles.alinhamentoimagemSelecionada}>
+                {imagem ? <Image source ={{uri: imagem}}style={styles.imagemSelecionada}/>:null}
+             </View>
+             <TouchableOpacity style={styles.imageButton}>
+                <Text style={styles.imageButtonText}>Selecionar Imagem</Text>
+             </TouchableOpacity>
+             <TouchableOpacity style={styles.imageButton}>
+                <Text style={styles.imageButtonText}>Tirar Foto</Text>
+             </TouchableOpacity>
+             <TouchableOpacity style={styles.button}>
+                <Text style={styles.buttonText}>Cadastrar Produto</Text>
+             </TouchableOpacity>
+            </View>
 
         </View>
     );
