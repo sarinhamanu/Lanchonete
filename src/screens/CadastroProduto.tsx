@@ -60,7 +60,7 @@ const CadastroProduto: React.FC = () =>{
              <TouchableOpacity style={styles.imageButton}>
                 <Text style={styles.imageButtonText}>Selecionar Imagem</Text>
              </TouchableOpacity>
-             <TouchableOpacity style={styles.imageButton}>
+             <TouchableOpacity style={styles.imageButton} onPress={abrirCamera}>
                 <Text style={styles.imageButtonText}>Tirar Foto</Text>
              </TouchableOpacity>
              <TouchableOpacity style={styles.button}>
