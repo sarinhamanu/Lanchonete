@@ -4,12 +4,13 @@ import ScrollViewExample from './src/ScrollViewExample';
 import  FlatListExample  from './src/FlatListExample';
 import  DoceListExample from './src/DoceExample';
 import  Cadastro  from'./src/Cadastro';
+import CadastroProduto from './src/screens/CadastroProduto';
 
 function App(): React.JSX.Element{
 
 
 return(
- <FlatListExample/>
+ <CadastroProduto/>
 );
 
 }
