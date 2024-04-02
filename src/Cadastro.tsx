@@ -21,8 +21,8 @@ function LoginSLanchonete(): JSX.Element {
 
 
 
+<Image source={require('./assets/images/usuario.png')} style={styles.logo}/>
 
-            <Image source={require('./assets/images/usuario.png')} style={styles.logo}/>
 
 
             <Text style={styles.title}>
@@ -58,9 +58,12 @@ function LoginSLanchonete(): JSX.Element {
                     <Text style={styles.forgotPassword}>Não possui conta ? Cadastre-se!</Text>
                 </TouchableOpacity>
 
-
+<TouchableOpacity>
                 <Image source={require('./assets/images/facebuco.png')} style={styles.logo1}/>
-                <Image source={require('./assets/images/google.png')} style={styles.logo2}/>
+                </TouchableOpacity>
+
+               
+
               
 
         </View>
@@ -132,21 +135,12 @@ const styles = StyleSheet.create({
     },
     logo1:{
         width:30,
-        height:50,
+        height:40,
     marginBottom:200,
-    borderRadius:80
+    borderRadius:80,
+    flexDirection:'row'
     },
-    logo2:{
-        width:30,
-        height:50,
-    marginBottom:200,
-    borderRadius:80
-    },
-    logo3:{
-        width:30,
-        height:50,
-    marginBottom:200,
-    borderRadius:80
-    }
+ 
+   
 })
 export default LoginSLanchonete;

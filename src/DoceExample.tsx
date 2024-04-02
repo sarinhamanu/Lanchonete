@@ -26,7 +26,7 @@ const renderItem = ({item}: {item:MeuItem})=>(
     <TouchableOpacity style={styles.item}>
         <Text style={styles.itemTexto1}>{item.nome}</Text>
         <Text style={styles.itemTexto} >{item.descricao}</Text>
-        <Text style={styles.itemTexto}>R${item.preco},00</Text>
+        <Text style={styles.itemTexto2}>R${item.preco},00</Text>
        <Image source={item.image} style={styles.image}/>
     </TouchableOpacity>
 );
@@ -42,7 +42,7 @@ function DoceExample(): React.JSX.Element{
                   source={require('./assets/images/Doce.png')}
                   style={styles.footerIcone}/>
             </TouchableOpacity>
-               <Text style={styles.headerText}>𝕾𝖜𝖊𝖊𝖙𝖘 𝖒𝖊𝖓𝖚</Text>
+               <Text style={styles.headerText}>  𝖒𝖊𝖓𝖚</Text>
                
             </View>
            <FlatList  
@@ -139,6 +139,11 @@ const styles = StyleSheet.create({
       color:'white',
       alignSelf:'center',
       fontSize:30,
+   },
+   itemTexto2:{
+    color:'white',
+    alignSelf:'center',
+    fontSize:30,
    }
 
 });

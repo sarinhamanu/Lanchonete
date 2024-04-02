@@ -13,11 +13,11 @@ const dados: MeuItem[]= [
    {id: "1", nome:"ℂ𝕠𝕔𝕒-𝕔𝕠𝕝𝕒 ", descricao: "Para se refrescar", preco: "12", image: require('./assets/images/cocacola.png')},
    {id: "2", nome:"𝔽𝕦𝕟𝕒𝕕𝕒 ", descricao: "Para se refrescar", preco: "10",  image:require('./assets/images/Funada.png')},
    {id: "3", nome:"𝔽𝕦𝕟𝕒𝕕𝕒 𝕃𝕚𝕞𝕒̃𝕠", descricao: "Para se refrescar", preco:"10",  image:require('./assets/images/funadalimao.png')},
-   {id: "4", nome:"𝕊𝕦𝕔𝕠 𝕕𝕖 𝕝𝕒𝕣𝕒𝕟𝕛𝕒", descricao: "Para se refrescar", preco:"15", image:require('./assets/images/sucolaranja.png')},
+   {id: "4", nome:"𝕊𝕦𝕔𝕠 𝕕𝕖 𝕝𝕒𝕣𝕒𝕟𝕛𝕒", descricao: "Para se refrescar", preco:"15", image:require('./assets/images/sucodelaranja.png')},
    {id: "5", nome:"𝕊𝕦𝕔𝕠 𝕕𝕖 𝕒𝕓𝕒𝕔𝕒𝕩𝕚 ", descricao:"Para se refrescar", preco:"15", image:require('./assets/images/abacaxi.png')},
    {id: "6", nome:"𝕊𝕦𝕔𝕠 𝕕𝕖 𝕞𝕒𝕣𝕒𝕔𝕦́𝕛𝕒 ", descricao: "Para se refrescar", preco:"15",  image:require('./assets/images/maracuja.png')},
    {id: "7", nome:"𝔸̀𝕘𝕦𝕒 𝕔𝕠𝕞 𝕘𝕒́𝕤", descricao: "Para se refrescar", preco:"4",  image:require('./assets/images/aguagás.png')},
-   {id: "8", nome:"𝔸̀𝕘𝕦𝕒 𝕟𝕠𝕣𝕞𝕒𝕝", descricao: "Para se refrescar", preco:"3", image:require('./assets/images/agua.png')},
+   {id: "8", nome:"𝔸̀𝕘𝕦𝕒 𝕊𝕖𝕞 𝔾á𝕤", descricao: "Para se refrescar", preco:"3", image:require('./assets/images/agua.png')},
 
 
 ];
@@ -26,7 +26,7 @@ const renderItem = ({item}: {item:MeuItem})=>(
     <TouchableOpacity style={styles.item}>
         <Text style={styles.itemTexto1}>{item.nome}</Text>
         <Text style={styles.itemTexto} >{item.descricao}</Text>
-        <Text style={styles.itemTexto}>R${item.preco},00</Text>
+        <Text style={styles.itemTexto2}>R${item.preco},00</Text>
        <Image source={item.image} style={styles.image}/>
     </TouchableOpacity>
 );
@@ -139,8 +139,12 @@ const styles = StyleSheet.create({
       color:'white',
       alignSelf:'center',
       fontSize:30,
+   },
+   itemTexto2:{
+    color:'white',
+    alignSelf:'center',
+    fontSize:30,
    }
-
 });
 
 export default DrinksExample;
