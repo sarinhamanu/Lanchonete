@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState }  from "react";
 import { Image, ScrollView, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { launchCamera } from "react-native-image-picker";
@@ -10,6 +11,29 @@ const CadastroProduto: React.FC = () =>{
     const[imagem,setImagem]= useState<any>('');
 
     const cadastrarProduto = async ()=>{
+        try{
+            const formData = new FormData();
+            formData.append('nome', nome);
+            formData.append('preco', preco);
+            formData.append('ingredientes', ingredientes);
+            formData.append ('imagem',{
+                uri:imagem,
+                type:'image/jpeg',
+                name: new Date() + '.jpg'
+            });
+            console.log(formData);
+            const response = await axios.post ('http://10.137.11.233:8000/api/cadastrarProduto', formData, {
+                headers : {
+                    'Content-Type ': 'multipart/form-data'
+                }
+            });
+            console.log(response);
+
+        }
+
+        catch (error){
+            console.log(error)
+        }
 
     }
 
@@ -195,4 +219,4 @@ const styles =StyleSheet.create({
     
 })
 
-export default CadastroProduto;
+export default cadastrarProduto;
