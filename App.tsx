@@ -3,8 +3,8 @@ import { FlatList, ScrollView } from 'react-native';
 import ScrollViewExample from './src/ScrollViewExample';
 import  FlatListExample  from './src/FlatListExample';
 import  DoceListExample from './src/DoceExample';
-import  Cadastro  from'./src/Cadastro';
 import CadastroProduto from './src/screens/CadastroProduto';
+import CadastroCliente from './src/screens/CadastroCliente';
 
 function App(): React.JSX.Element{
 

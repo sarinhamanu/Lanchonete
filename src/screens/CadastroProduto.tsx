@@ -1,5 +1,5 @@
 import React, { useState }  from "react";
-import { Image, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, ScrollView, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { launchCamera } from "react-native-image-picker";
 
 const CadastroProduto: React.FC = () =>{
@@ -36,39 +36,76 @@ const CadastroProduto: React.FC = () =>{
     }
 
     return(
-        <View style={styles.container}>
-            <StatusBar backgroundColor="red" barStyle="light-content"/>
-            <View style={styles.header}>
-                <Text style={styles.headerText}>Top Food</Text>
-            </View>
+
+        <View style ={styles.container}>
+        <StatusBar backgroundColor="black" barStyle="light-content"/>
+        <View style={styles.header}>
+        <Image
+                  source={require('../assets/images/casa.png')}
+                  style={styles.footerIcone}/>
+            <Text style={styles.headerText}>𝖈𝖆𝖋𝖊𝖙𝖊𝖗𝖎𝖆 𝖇𝖊𝖆𝖈𝖍</Text>
             
+            
+
+            </View>
+
+            <View style ={styles.container}>
+        <StatusBar backgroundColor="black" barStyle="light-content"/>
+        <View style={styles.header}>
+        
+            <Text style={styles.headerText1}>𓂀 ℂ𝕒𝕕𝕒𝕤𝕥𝕣𝕠 𝕕𝕖 ℙ𝕣𝕠𝕕𝕦𝕥𝕠 𓂀</Text>
+            
+            
+
+            </View>
+            <ScrollView>
             <View style={styles.form}>
-                <TextInput style={styles.input} placeholder="Nome do Produto"
+                <TextInput style={styles.input} placeholder="ミ★ 𝘕𝘰𝘮𝘦 𝘥𝘰𝘗𝘳𝘰𝘥𝘶𝘵𝘰 ★彡"
                 value={nome}
-                onChangeText={setNome}/>
+                onChangeText={setNome} />
               
-                <TextInput style={styles.input} placeholder="Preço"
+                <TextInput style={styles.input} placeholder="ミ★ 𝘱𝘳𝘦𝘤𝘰 ★彡"
                 value={preco}
                 onChangeText={SetPreco}/>
               
-                <TextInput style={styles.input} placeholder="Ingredientes"
+                <TextInput style={styles.input} placeholder="ミ★ 𝘐𝘯𝘨𝘳𝘦𝘥𝘪𝘦𝘯𝘵𝘦𝘴 ★彡"
                 value={ingredientes}
                 onChangeText={setIngredientes} multiline/>
              <View style={styles.alinhamentoimagemSelecionada}>
                 {imagem ? <Image source ={{uri: imagem}}style={styles.imagemSelecionada}/>:null}
              </View>
              <TouchableOpacity style={styles.imageButton}>
-                <Text style={styles.imageButtonText}>Selecionar Imagem</Text>
+                <Text style={styles.imageButtonText}>𝕊𝕖𝕝𝕖𝕔𝕚𝕠𝕟𝕒𝕣 𝕀𝕞𝕒𝕘𝕖𝕞</Text>
              </TouchableOpacity>
              <TouchableOpacity style={styles.imageButton} onPress={abrirCamera}>
-                <Text style={styles.imageButtonText}>Tirar Foto</Text>
+                <Text style={styles.imageButtonText}>𝕋𝕚𝕣𝕒𝕣 𝔽𝕠𝕥𝕠</Text>
              </TouchableOpacity>
              <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>Cadastrar Produto</Text>
+                <Text style={styles.buttonText}>ℂ𝕒𝕕𝕒𝕤𝕥𝕣𝕒𝕣 ℂ𝕝𝕚𝕖𝕟𝕥𝕖</Text>
              </TouchableOpacity>
             </View>
+            </ScrollView>
 
+            <View style={styles.footer}>
+            <TouchableOpacity>
+                <Image
+                  source={require('../assets/images/anotar.png')}
+                  style={styles.footerIcone}/>
+            </TouchableOpacity>
+            
+            <TouchableOpacity>
+                <Image source={require('../assets/images/watts.png')}
+                  style={styles.footerIcone}/>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+                <Image source={require('../assets/images/carrinho.png')}
+                  style={styles.footerIcone}/>
+            </TouchableOpacity> 
+           </View>
         </View>
+        </View>
+        
     );
 }
 const styles =StyleSheet.create({
@@ -77,12 +114,14 @@ const styles =StyleSheet.create({
         flex: 1
     },
     header:{
-    backgroundColor:'red',
+        backgroundColor: 'pink',
+        paddingVertical: 20,
+        alignItems: 'center'
     },
-    headerText:{
-        fontSize: 20,
-        fontWeight:'bold',
-        color:'white',
+    headerText: {
+        fontSize: 40,
+        fontWeight: '100',
+        color:'white'
     },
     form:{
     padding:10,
@@ -90,23 +129,25 @@ const styles =StyleSheet.create({
     marginBottom:10
     },
     input:{
-        height:40,
-        borderColor:'gray',
-        borderWidth:1,
+        height:50,
+        borderColor:'#121212',
+        borderWidth:3,
         marginBottom:10,
         paddingHorizontal:10,
         borderRadius:10
     },
     imageButton:{
-    backgroundColor:'red',
+    backgroundColor:'pink',
     padding:10,
-    borderRadius:5,
+    borderRadius:30,
     alignItems:'center',
-    marginBottom:10
+    marginBottom:10,
+    fontWeight:'bold',
     },
     imageButtonText:{
         color:'white',
-        fontWeight:'bold',
+        fontSize:20,
+        fontWeight:'bold'
     },
     imagemSelecionada:{
         width:200,
@@ -120,15 +161,38 @@ const styles =StyleSheet.create({
         alignItems:'center',
     },
     button:{
-        backgroundColor:'red',
+        backgroundColor:'pink',
         padding:10,
-        borderRadius:5,
-        alignItems:'center'
+        borderRadius:30,
+        alignItems:'center',
+        marginBottom:10
     },
     buttonText:{
         color:'white',
         fontWeight:'bold',
-    }
+        fontSize:20,
+       
+    },
+    footer:{
+        borderTopWidth: 0.2,
+        backgroundColor: 'black',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        paddingVertical: 10,
+        marginTop:'auto'
+      },
+      footerIcone:{
+        width: 70,
+        height:70,
+     borderRadius:30,
+     },
+     headerText1: {
+        fontSize: 25,
+        fontWeight: '100',
+        color:'white'
+    },
+    
 })
 
 export default CadastroProduto;
