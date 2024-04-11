@@ -10,7 +10,7 @@ function App(): React.JSX.Element{
 
 
 return(
- <CadastroProduto/>
+ <FlatListExample/>
 );
 
 }

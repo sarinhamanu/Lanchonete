@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState }  from "react";
 import { Image, ScrollView, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { launchCamera } from "react-native-image-picker";
+import { Produto } from "../interface/ProdutoInterface";
 
 const CadastroProduto: React.FC = () =>{
     const[produtos, setProdutos]= useState<Produto[]>([]);
@@ -16,13 +17,13 @@ const CadastroProduto: React.FC = () =>{
             formData.append('nome', nome);
             formData.append('preco', preco);
             formData.append('ingredientes', ingredientes);
-            formData.append ('imagem',{
-                uri:imagem,
+            formData.append('imagem', {
+                uri: imagem,
                 type:'image/jpeg',
                 name: new Date() + '.jpg'
             });
             console.log(formData);
-            const response = await axios.post ('http://10.137.11.233:8000/api/cadastrarProduto', formData, {
+            const response = await axios.post('http://10.137.11.219:8000/api/cadastrarProduto', formData, {
                 headers : {
                     'Content-Type ': 'multipart/form-data'
                 }
@@ -105,7 +106,7 @@ const CadastroProduto: React.FC = () =>{
                 <Text style={styles.imageButtonText}>𝕋𝕚𝕣𝕒𝕣 𝔽𝕠𝕥𝕠</Text>
              </TouchableOpacity>
              <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>ℂ𝕒𝕕𝕒𝕤𝕥𝕣𝕒𝕣 ℂ𝕝𝕚𝕖𝕟𝕥𝕖</Text>
+                <Text style={styles.buttonText}onPress={cadastrarProduto}>ℂ𝕒𝕕𝕒𝕤𝕥𝕣𝕒𝕣 ℙ𝕣𝕠𝕕𝕦𝕥𝕠 </Text>
              </TouchableOpacity>
             </View>
             </ScrollView>
@@ -219,4 +220,4 @@ const styles =StyleSheet.create({
     
 })
 
-export default cadastrarProduto;
+export default CadastroProduto;

@@ -20,17 +20,19 @@ const CadastroCliente: React.FC = () => {
         formData.append('endereco', endereco);
         formData.append('email',email);
         formData.append('password',password);
-        formData.append('foto',{
+        formData.append('imagem',{
             uri: foto,
             type: 'image/jpeg',
             name: new Date () + '.jpg'
         });
-
-        const response = await axios.post('http://10.137.11.233:8000/api/cliente', formData, {
+        console.log(formData);
+        const response = await axios.post('http://10.137.11.219:8000/api/cadastrarCliente', formData, {
             headers: {
                 'Content-Type':'multipart/form-data'
             }
         });
+
+        console.log(response);
     }
 
     catch(error){
@@ -80,6 +82,7 @@ const CadastroCliente: React.FC = () => {
 
         })
     }
+
     return(
     
         <View style ={Styles.container}>
@@ -107,6 +110,9 @@ const CadastroCliente: React.FC = () => {
                 
        <ScrollView >
                <View style={Styles.form}>
+               <View style={Styles.alinhamentoImagemSelecionada}>
+                    {foto ? <Image source={{ uri: foto}} style={Styles.imagemSelecionada}/>:null}
+                </View>
                 <TextInput style={Styles.input} placeholder="ミ★ 𝘕𝘰𝘮𝘦 ★彡" value={nome}
                 onChangeText={setNome}/>
 <TextInput style={Styles.input} placeholder=" ミ★ 𝙏𝙀𝙇𝙀𝙁𝙊𝙉𝙀 ★彡" value={telefone}
@@ -117,9 +123,6 @@ const CadastroCliente: React.FC = () => {
                 onChangeText={setEmail} multiline/>
                  <TextInput style={Styles.input} placeholder="ミ★ 𝙎𝙀𝙉𝙃𝘼 ★彡" value={password}
                 onChangeText={setPassword} multiline/>
-                <View style={Styles.alinhamentoImagemSelecionada}>
-                    {foto ? <Image source={{ uri: foto}} style={Styles.imagemSelecionada}/>:null}
-                </View>
                 <TouchableOpacity style={Styles.imageButton}>
                     <Text style={Styles.imageButtonText} onPress={selecionarImagem}>𝕊𝕖𝕝𝕖𝕔𝕚𝕠𝕟𝕒𝕣 </Text>
                 </TouchableOpacity>
