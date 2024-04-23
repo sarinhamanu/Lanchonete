@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Image, ScrollView, StatusBar, StyleSheet,Text, TextInput, TouchableOpacity, View } from "react-native";
 import { launchCamera, launchImageLibrary } from "react-native-image-picker";
+
 import axios from "axios";
 
 const CadastroCliente: React.FC = () => {
