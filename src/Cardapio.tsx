@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import axios from "axios";
 import {  Produto } from "./interface/ProdutoInterface";
+import { useNavigation } from "@react-navigation/native";
 
 
 
@@ -40,13 +41,15 @@ function LanchoneteExample(): React.JSX.Element {
 
     fetchData();
   }, []);
- 
+  const navigation = useNavigation();
   return (
+
+
     <View style={styles.container}>
       <StatusBar backgroundColor="black" barStyle='light-content' />
       <View style={styles.header}>
 
-        <TouchableOpacity>
+        <TouchableOpacity >
           <Image
             source={require('./assets/images/casa.png')}
             style={styles.footerIcone} />
@@ -70,7 +73,7 @@ function LanchoneteExample(): React.JSX.Element {
             style={styles.footerIcon} />
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=> navigation.navigate('LanchoneteExample')}>
           <Image source={require('./assets/images/watts.png')}
             style={styles.footerIcon} />
         </TouchableOpacity>
